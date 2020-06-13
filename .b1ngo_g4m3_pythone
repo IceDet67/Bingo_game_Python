@@ -1,0 +1,43 @@
+import random
+
+while True:
+    print('''
+    -Welcome to Bingo
+    -Created by:IceDet67
+    -To exit the program you can type "ESC"
+    ----------------------------------------------------------
+    --->RULES<---
+    
+    1)enter an integer
+    2)decide if the even or odd one starts to draw the number
+    3)press space to see what number came out
+    4)decide whether to continue playing or stop
+    5)GOOD GAME
+    ''')
+
+    n=int(input("put a number...")) #entering an even or odd number
+    resto=n%2
+    if resto==0:
+        print("even number") #even 
+    else:
+        print("odd number")  #odd
+
+    scelta = input()
+    x=random.randint(1,100) #random number 
+    print("put a random number",x)
+    if scelta == "ESC":     #loop if closed program
+        print('''The application will now be closed!
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''')
+        break
+    loop = input('\nDo you want to continue using the application? S / N ') #continue or close the program
+    if loop == "S" or loop == "s":
+        print('''I'm going back to the main menu!
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''')
+        continue
+    else:
+        print('''Thank you and goodbye!
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''')
+        break
+
